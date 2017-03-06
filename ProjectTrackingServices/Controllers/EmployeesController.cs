@@ -1,6 +1,7 @@
 ﻿using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using ProjectTracking.Domain.Interfaces.Repositories;
 using ProjectTracking.Infra.Data.Repository;
 using ProjectTrackingServices.Entities;
 
@@ -10,9 +11,9 @@ namespace ProjectTrackingServices.Controllers
     //[EnableCors(origins: "http://localhost:57680", headers: "*", methods: "*")]
     public class EmployeesController : ApiController
     {
-        private readonly EmployeeRepository _repository;
+        private readonly IEmployeeRepository _repository;
 
-        public EmployeesController(EmployeeRepository repository)
+        public EmployeesController(IEmployeeRepository repository)
         {
             _repository = repository;
         }
@@ -66,7 +67,8 @@ namespace ProjectTrackingServices.Controllers
         [Route("api/employees")]
         public HttpResponseMessage Delete(Employee employee)
         {
-            var employees = _repository.Delete(employee);
+            _repository.Delete(employee);
+            var employees = _repository.GetAll();
             HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, employees);
             return response;
         }

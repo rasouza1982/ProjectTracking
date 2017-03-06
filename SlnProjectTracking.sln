@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectTracking.Infra.Data"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectTracking.Domain", "ProjectTracking.Domain\ProjectTracking.Domain.csproj", "{148F1C22-8BAC-4C76-A1A4-00CF261F0F79}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectTracking.Infra.CrossCutting.IoC", "ProjectTracking.Infra.CrossCutting.IoC\ProjectTracking.Infra.CrossCutting.IoC.csproj", "{29C5ECD9-F94E-4318-9927-8C7C168D20E9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{148F1C22-8BAC-4C76-A1A4-00CF261F0F79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{148F1C22-8BAC-4C76-A1A4-00CF261F0F79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{148F1C22-8BAC-4C76-A1A4-00CF261F0F79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29C5ECD9-F94E-4318-9927-8C7C168D20E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29C5ECD9-F94E-4318-9927-8C7C168D20E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29C5ECD9-F94E-4318-9927-8C7C168D20E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29C5ECD9-F94E-4318-9927-8C7C168D20E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

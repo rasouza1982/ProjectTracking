@@ -4,10 +4,11 @@ using System.Linq;
 using ProjectTracking.Infra.Data.DataContext;
 using ProjectTrackingServices.Entities;
 using System.Data.Entity;
+using ProjectTracking.Domain.Interfaces.Repositories;
 
 namespace ProjectTracking.Infra.Data.Repository
 {
-    public class EmployeeRepository : Repository<Employee>
+    public class EmployeeRepository : Repository<Employee>, IEmployeeRepository
     {
 
         private readonly ProjectTrackingDataContext _context;
