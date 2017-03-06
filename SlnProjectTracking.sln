@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectTrackingWebsite", "ProjectTrackingWebsite\ProjectTrackingWebsite.csproj", "{AD1FB5C4-BC76-4854-96A2-53D971D7D283}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectTrackingServices", "ProjectTrackingServices\ProjectTrackingServices.csproj", "{D1B2FD28-08EF-4899-A068-8A6E0F51810E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectTracking.Infra.Data", "ProjectTracking.Infra.Data\ProjectTracking.Infra.Data.csproj", "{5871E742-A612-42A3-A760-7963E8A1BEAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectTracking.Domain", "ProjectTracking.Domain\ProjectTracking.Domain.csproj", "{148F1C22-8BAC-4C76-A1A4-00CF261F0F79}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD1FB5C4-BC76-4854-96A2-53D971D7D283}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD1FB5C4-BC76-4854-96A2-53D971D7D283}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD1FB5C4-BC76-4854-96A2-53D971D7D283}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD1FB5C4-BC76-4854-96A2-53D971D7D283}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1B2FD28-08EF-4899-A068-8A6E0F51810E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1B2FD28-08EF-4899-A068-8A6E0F51810E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1B2FD28-08EF-4899-A068-8A6E0F51810E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1B2FD28-08EF-4899-A068-8A6E0F51810E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5871E742-A612-42A3-A760-7963E8A1BEAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5871E742-A612-42A3-A760-7963E8A1BEAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5871E742-A612-42A3-A760-7963E8A1BEAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5871E742-A612-42A3-A760-7963E8A1BEAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{148F1C22-8BAC-4C76-A1A4-00CF261F0F79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{148F1C22-8BAC-4C76-A1A4-00CF261F0F79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{148F1C22-8BAC-4C76-A1A4-00CF261F0F79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{148F1C22-8BAC-4C76-A1A4-00CF261F0F79}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
