@@ -41,7 +41,11 @@
   <ItemGroup>
     <Compile Include="Employee.cs" />
     <Compile Include="Interfaces\Repositories\IEmployeeRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IManagerCommentRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IProjectRepository.cs" />
     <Compile Include="Interfaces\Repositories\IRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IUserStoryRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IProjectTaskRepository.cs" />
     <Compile Include="ManagerComment.cs" />
     <Compile Include="Project.cs" />
     <Compile Include="ProjectTask.cs" />

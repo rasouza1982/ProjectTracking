@@ -13,11 +13,11 @@ namespace ProjectTrackingServices.Entities
         }
 
         public int ProjectTaskID { get; set; }
-        public Nullable<int> AssignedTo { get; set; }
-        public Nullable<System.DateTime> TaskStartDate { get; set; }
-        public Nullable<System.DateTime> TaskEndDate { get; set; }
-        public Nullable<int> TaskCompletion { get; set; }
-        public Nullable<int> UserStoryID { get; set; }
+        public int? AssignedTo { get; set; }
+        public DateTime? TaskStartDate { get; set; }
+        public DateTime? TaskEndDate { get; set; }
+        public int? TaskCompletion { get; set; }
+        public int? UserStoryID { get; set; }
 
         public virtual Employee Employee { get; set; }
         public virtual ICollection<ManagerComment> ManagerComments { get; set; }

@@ -14,7 +14,7 @@ namespace ProjectTrackingServices.Entities
 
         public int UserStoryID { get; set; }
         public string Story { get; set; }
-        public Nullable<int> ProjectID { get; set; }
+        public int? ProjectID { get; set; }
 
         public virtual Project Project { get; set; }
         public virtual ICollection<ProjectTask> ProjectTasks { get; set; }

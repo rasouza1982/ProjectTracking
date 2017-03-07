@@ -18,7 +18,7 @@ namespace ProjectTrackingServices.Controllers
             _repository = repository;
         }
 
-        // GET api/ptemployees
+        // GET api/employees
         [Route("api/employees")]
         public HttpResponseMessage Get()
         {
@@ -27,7 +27,7 @@ namespace ProjectTrackingServices.Controllers
             return response;
         }
 
-        // GET api/ptemployees/5
+        // GET api/employees/5
         [Route("api/employees/{id?}")]
         public HttpResponseMessage Get(int id)
         {
@@ -44,7 +44,7 @@ namespace ProjectTrackingServices.Controllers
             return response;
         }
 
-        // POST api/ptemployees
+        // POST api/employees
         [Route("api/employees")]
         public HttpResponseMessage Post(Employee employee)
         {
