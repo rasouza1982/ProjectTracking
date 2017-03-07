@@ -18,7 +18,6 @@ namespace ProjectTracking.Infra.Data.Mapping
             Property(x => x.ContactNo).HasMaxLength(15).IsOptional();
             Property(x => x.EMailId).HasMaxLength(30).IsOptional();
             Property(x => x.SkillSets).HasMaxLength(100).IsOptional();
-   
          }
 
     }

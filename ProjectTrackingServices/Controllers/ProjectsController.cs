@@ -1,14 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using System.Collections.Generic;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace ProjectTrackingServices.Controllers
 {
+
+    [EnableCors(origins: "http://localhost:57680", headers: "*", methods: "*")]
     public class ProjectsController : ApiController
     {
+
+
         // GET api/projects
         public IEnumerable<string> Get()
         {

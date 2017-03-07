@@ -120,63 +120,13 @@
     <Compile Include="Controllers\ProjectsController.cs" />
     <Compile Include="Controllers\UserStoryController.cs" />
     <Compile Include="Controllers\UserTasksController.cs" />
-    <Compile Include="Employees.cs">
-      <DependentUpon>ProjectTrackingDB.tt</DependentUpon>
-    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="ManagerComments.cs">
-      <DependentUpon>ProjectTrackingDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Projects.cs">
-      <DependentUpon>ProjectTrackingDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ProjectTasks.cs">
-      <DependentUpon>ProjectTrackingDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ProjectTrackingDB.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ProjectTrackingDB.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ProjectTrackingDB.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ProjectTrackingDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ProjectTrackingDB.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ProjectTrackingDB.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="sysdiagrams.cs">
-      <DependentUpon>ProjectTrackingDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="UserStories.cs">
-      <DependentUpon>ProjectTrackingDB.tt</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <EntityDeploy Include="ProjectTrackingDB.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ProjectTrackingDB.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="ProjectTrackingDB.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ProjectTrackingDB.edmx</DependentUpon>
-      <LastGenOutput>ProjectTrackingDB.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="ProjectTrackingDB.edmx.diagram">
-      <DependentUpon>ProjectTrackingDB.edmx</DependentUpon>
-    </Content>
-    <Content Include="ProjectTrackingDB.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ProjectTrackingDB.edmx</DependentUpon>
-      <LastGenOutput>ProjectTrackingDB.cs</LastGenOutput>
-    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

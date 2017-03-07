@@ -1,6 +1,7 @@
 ﻿using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using ProjectTracking.Domain.Interfaces.Repositories;
 using ProjectTracking.Infra.Data.Repository;
 using ProjectTrackingServices.Entities;
@@ -8,7 +9,7 @@ using ProjectTrackingServices.Entities;
 
 namespace ProjectTrackingServices.Controllers
 {
-    //[EnableCors(origins: "http://localhost:57680", headers: "*", methods: "*")]
+    [EnableCors(origins: "http://localhost:57680", headers: "*", methods: "*")]
     public class EmployeesController : ApiController
     {
         private readonly IEmployeeRepository _repository;
