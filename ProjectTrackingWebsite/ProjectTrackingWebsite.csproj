@@ -59,10 +59,14 @@
   <ItemGroup>
     <Content Include="controllers\EmployeesController.js" />
     <Content Include="controllers\HomeController.js" />
+    <Content Include="controllers\ProjectsController.js" />
+    <Content Include="controllers\ProjectTasksController.js" />
+    <Content Include="controllers\UserStoriesController.js" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\Site.css" />
     <Content Include="employees\EmployeeDetails.html" />
     <Content Include="Home.html" />
+    <Content Include="ProjectManagement\ProjectDetails.html" />
     <Content Include="scripts\angular-animate.js" />
     <Content Include="scripts\angular-animate.min.js" />
     <Content Include="scripts\angular-aria.js" />
@@ -826,6 +830,8 @@
     <Content Include="scripts\jquery-3.1.1.min.js" />
     <Content Include="scripts\jquery-3.1.1.slim.js" />
     <Content Include="scripts\jquery-3.1.1.slim.min.js" />
+    <Content Include="tasks\ProjectTaskDetails.html" />
+    <Content Include="UserStories\UserStoryDetails.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -858,10 +864,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="images\" />
-    <Folder Include="ProjectManagement\" />
     <Folder Include="services\" />
-    <Folder Include="tasks\" />
-    <Folder Include="UserStories\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

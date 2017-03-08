@@ -119,7 +119,7 @@
     <Compile Include="Controllers\ManagerCommentsController.cs" />
     <Compile Include="Controllers\ProjectsController.cs" />
     <Compile Include="Controllers\UserStoryController.cs" />
-    <Compile Include="Controllers\UserTasksController.cs" />
+    <Compile Include="Controllers\ProjectTasksController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
