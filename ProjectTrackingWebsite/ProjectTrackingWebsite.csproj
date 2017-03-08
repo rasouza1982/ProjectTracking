@@ -59,6 +59,7 @@
   <ItemGroup>
     <Content Include="controllers\EmployeesController.js" />
     <Content Include="controllers\HomeController.js" />
+    <Content Include="controllers\ManagerCommentsController.js" />
     <Content Include="controllers\ProjectsController.js" />
     <Content Include="controllers\ProjectTasksController.js" />
     <Content Include="controllers\UserStoriesController.js" />
@@ -66,6 +67,7 @@
     <Content Include="css\Site.css" />
     <Content Include="employees\EmployeeDetails.html" />
     <Content Include="Home.html" />
+    <Content Include="ProjectManagement\ManagerCommentDetails.html" />
     <Content Include="ProjectManagement\ProjectDetails.html" />
     <Content Include="scripts\angular-animate.js" />
     <Content Include="scripts\angular-animate.min.js" />

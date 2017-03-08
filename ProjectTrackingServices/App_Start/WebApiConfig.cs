@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using Microsoft.Practices.Unity;
 using Newtonsoft.Json.Serialization;
 using ProjectTracking.Infra.CrossCutting.IoC;
@@ -12,8 +13,10 @@ namespace ProjectTrackingServices
     {
         public static void Register(HttpConfiguration config)
         {
+            var corsAttr = new EnableCorsAttribute("http://localhost", "*", "*");
+            config.EnableCors(corsAttr);
             // Web API configuration and services
-            config.EnableCors();
+            //config.EnableCors();
             
             // Web API routes
             config.MapHttpAttributeRoutes();

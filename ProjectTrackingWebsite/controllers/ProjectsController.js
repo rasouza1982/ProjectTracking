@@ -6,7 +6,7 @@
         var errorDetails = function (response) {
             $scope.Error = "Something went wrong ??";
         };
-        $http.get("http://localhost:55559/api/projects/1")
+        $http.get("http://localhost:55559/api/projects")
             .then(projects, errorDetails);
         $scope.Title = "Project Details Page";
     };

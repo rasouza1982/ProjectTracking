@@ -2,11 +2,13 @@
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using ProjectTracking.Domain.Interfaces.Repositories;
 using ProjectTrackingServices.Entities;
 
 namespace ProjectTrackingServices.Controllers
 {
+    [EnableCors(origins: "http://localhost:57680", headers: "*", methods: "*")]
     public class ManagerCommentsController : ApiController
     {
         private readonly IManagerCommentRepository _repository;
@@ -56,7 +58,7 @@ namespace ProjectTrackingServices.Controllers
         }
 
         // DELETE api/managercomments/5
-        [Route("api/managerComment")]
+        [Route("api/managercomments")]
         public HttpResponseMessage Delete(ManagerComment managerComment)
         {
             _repository.Delete(managerComment);

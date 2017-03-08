@@ -23,12 +23,12 @@
             </tr>
         </thead>
         <tbody>
-            <tr class="success">
-                <td>{{Projects.projectId}}</td>
-                <td>{{Projects.projectName}}</td>
-                <td>{{Projects.startDate}}</td>
-                <td>{{Projects.endDate}}</td>
-                <td>{{Projects.clientName}}</td>
+            <tr class="table-striped" ng-repeat="proj in Projects">
+                <td>{{proj.projectId}}</td>
+                <td>{{proj.projectName}}</td>
+                <td>{{proj.startDate | date:'short'}}</td>
+                <td>{{proj.endDate | date:'short'}}</td>
+                <td>{{proj.clientName}}</td>
             </tr>
         </tbody>
     </table>
