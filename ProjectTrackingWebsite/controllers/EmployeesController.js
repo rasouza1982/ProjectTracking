@@ -1,47 +1,53 @@
 ﻿(function () {
-    var EmployeesController = function ($scope, $http) {
-        var employees = function (serviceResp) {
-            $scope.Employees = serviceResp.data;
+    var EmployeesController = function ($scope, employeeService, $log) {
+        var employees = function (data) {
+            $scope.Employees = data;
 
         };
-        $scope.SearchEmployees = function (EmployeeName) {
-            console.log("Entrou Search:", EmployeeName);
-            $http.get("http://localhost:55559/api/employees/" + EmployeeName)
+        $scope.searchEmployees = function (employeeName) {
+            employeeService.searchEmployees(employeeName)
             .then(employees, errorDetails);
+
+            $log.info("Found Employee which contains - " + employeeName);
         };
-        var errorDetails = function (serviceResp) {
+        var errorDetails = function (response) {
             $scope.Error = "Something went wrong ??";
         };
-        $http.get("http://localhost:55559/api/employees")
+
+        employeeService.employees()
             .then(employees, errorDetails);
+
         $scope.Title = "Employee Details Page";
         $scope.EmployeeName = null;
+
     };
-    app.controller("EmployeesController", EmployeesController);
+    app.controller("EmployeesController", ["$scope", "employeeService", "$log", EmployeesController]);
 }());
 
 
 
-//(function () {
-//    var EmployeesController = function ($scope, $http) {
-//        var employees = function (response) {
-//            $scope.Employees = response.data;
-//        };
 
+
+
+//(function () {
+//    var EmployeesController = function ($scope, $http, $log) {
+//        var employees = function (serviceResp) {
+//            $scope.Employees = serviceResp.data;
+
+//        };
 //        $scope.SearchEmployees = function (EmployeeName) {
 //            $http.get("http://localhost:55559/api/employees/" + EmployeeName)
 //            .then(employees, errorDetails);
+//            $log.info("Found Employee which contains - " + EmployeeName);
 //        };
-
-//        var errorDetails = function (response) {
+//        var errorDetails = function (serviceResp) {
 //            $scope.Error = "Something went wrong ??";
 //        };
-
 //        $http.get("http://localhost:55559/api/employees")
 //            .then(employees, errorDetails);
-
 //        $scope.Title = "Employee Details Page";
 //        $scope.EmployeeName = null;
 //    };
 //    app.controller("EmployeesController", EmployeesController);
 //}());
+

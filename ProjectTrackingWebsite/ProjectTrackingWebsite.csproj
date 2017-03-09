@@ -832,6 +832,11 @@
     <Content Include="scripts\jquery-3.1.1.min.js" />
     <Content Include="scripts\jquery-3.1.1.slim.js" />
     <Content Include="scripts\jquery-3.1.1.slim.min.js" />
+    <Content Include="services\EmployeesService.js" />
+    <Content Include="services\ManagerCommentsService.js" />
+    <Content Include="services\ProjectsService.js" />
+    <Content Include="services\ProjectTasksService.js" />
+    <Content Include="services\UserStoriesService.js" />
     <Content Include="tasks\ProjectTaskDetails.html" />
     <Content Include="UserStories\UserStoryDetails.html" />
     <Content Include="Web.config" />
@@ -866,7 +871,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="images\" />
-    <Folder Include="services\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

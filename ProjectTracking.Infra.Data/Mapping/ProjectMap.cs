@@ -11,12 +11,12 @@ namespace ProjectTracking.Infra.Data.Mapping
             ToTable("Projects");
             
             HasKey(x => x.ProjectId);
+            
             Property(x => x.ProjectId).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-
-            Property(x => x.ProjectName).IsOptional().HasMaxLength(100);
+            Property(x => x.ProjectName).HasMaxLength(100).IsOptional();
             Property(x => x.StartDate).IsOptional();
             Property(x => x.EndDate).IsOptional();
-            Property(x => x.ClientName).IsOptional().HasMaxLength(100);
+            Property(x => x.ClientName).HasMaxLength(100).IsOptional();
 
         }
          

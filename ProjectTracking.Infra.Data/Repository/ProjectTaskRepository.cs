@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using ProjectTracking.Domain.Interfaces.Repositories;
+﻿using ProjectTracking.Domain.Interfaces.Repositories;
 using ProjectTracking.Infra.Data.DataContext;
 using ProjectTrackingServices.Entities;
 

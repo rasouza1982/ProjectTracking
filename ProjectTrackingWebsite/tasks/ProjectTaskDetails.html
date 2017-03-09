@@ -8,6 +8,7 @@
     <script src="../scripts/angular.min.js"></script>
     <script src="../scripts/bootstrap.min.js"></script>
     <script src="../scripts/app.js"></script>
+    <script src="../services/ProjectTasksService.js"></script>
     <script src="../controllers/ProjectTasksController.js"></script>
 </head>
 <body ng-controller="ProjectTasksController">
@@ -22,11 +23,11 @@
             </tr>
         </thead>
         <tbody>
-            <tr class="success">
-                <td>{{Tasks.projectTaskID}}</td>
-                <td>{{Tasks.taskStartDate}}</td>
-                <td>{{Tasks.taskEndDate}}</td>
-                <td>{{Tasks.taskCompletion}}&nbsp;%</td>
+            <tr class="success" ng-repeat="task in Tasks">
+                <td>{{task.projectTaskID}}</td>
+                <td>{{task.taskStartDate}}</td>
+                <td>{{task.taskEndDate}}</td>
+                <td>{{task.taskCompletion}}&nbsp;%</td>
             </tr>
         </tbody>
     </table>

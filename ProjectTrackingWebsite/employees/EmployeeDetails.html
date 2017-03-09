@@ -8,12 +8,13 @@
     <script src="../scripts/angular.min.js"></script>
     <script src="../scripts/bootstrap.min.js"></script>
     <script src="../scripts/app.js"></script>
+    <script src="../services/EmployeesService.js"></script>
     <script src="../controllers/EmployeesController.js"></script>
 </head>
 <body ng-controller="EmployeesController">
 <h3>{{Title}}</h3>
-    <form name="searchEmployeeForm" ng-submit="SearchEmployees(EmployeeName)">
-        Enter Employee Name Or Character To Search - <input type="text" required placeholder="Enter EmployeeID" ng-model="EmployeeName" />
+    <form name="searchEmployeeForm" ng-submit="searchEmployees(employeeName)">
+        Enter Employee Name Or Character To Search - <input type="text" required placeholder="Enter EmployeeID" ng-model="employeeName" />
         <input type="submit" value="Search Employee" />
     </form>
     <table class="table table-striped table-hover" ng-show="Employees">
@@ -28,7 +29,7 @@
         </tr>
     </thead>
     <tbody>
-    <tr class="table-striped" ng-repeat="emp in Employees | limitTo:5 | orderBy:'+employeeName'" >
+    <tr class="table-striped" ng-repeat="emp in Employees | limitTo:10 | orderBy:'+employeeName'" >
             <td>{{emp.employeeId}}</td>
             <td>{{emp.employeeName}}</td>
             <td>{{emp.designation}}</td>

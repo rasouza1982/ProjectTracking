@@ -17,6 +17,14 @@ namespace ProjectTracking.Infra.Data.Mapping
             Property(x => x.TaskEndDate).IsOptional();
             Property(x => x.TaskCompletion).IsOptional();
             Property(x => x.UserStoryID).IsOptional();
+
+            HasOptional(t => t.Employee)
+               .WithMany(t => t.ProjectTasks)
+               .HasForeignKey(d => d.AssignedTo);
+
+            HasOptional(t => t.UserStory)
+                .WithMany(t => t.ProjectTasks)
+                .HasForeignKey(d => d.UserStoryID);
         }
     }
 }

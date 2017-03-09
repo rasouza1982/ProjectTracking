@@ -13,7 +13,7 @@ namespace ProjectTrackingServices
     {
         public static void Register(HttpConfiguration config)
         {
-            var corsAttr = new EnableCorsAttribute("http://localhost", "*", "*");
+            var corsAttr = new EnableCorsAttribute("http://localhost:57680", "*", "*");
             config.EnableCors(corsAttr);
             // Web API configuration and services
             //config.EnableCors();
