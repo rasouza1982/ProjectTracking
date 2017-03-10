@@ -51,6 +51,5 @@ namespace ProjectTracking.Infra.Data.Repository
             _context.Dispose();
             GC.SuppressFinalize(this);
         }
-
     }
 }
