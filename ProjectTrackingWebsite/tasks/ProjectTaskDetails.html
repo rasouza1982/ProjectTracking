@@ -1,35 +1,28 @@
-﻿<!DOCTYPE html>
-<html lang="en" ng-app="ProjectTrackingModule">
-<head>
-    <title>Project Task Details</title>
-    <script src="../Scripts/jquery-3.1.1.min.js"></script>
-    <link href="../css/bootstrap.min.css" rel="stylesheet" />
-    <link href="../css/Site.css" rel="stylesheet" />
-    <script src="../scripts/angular.min.js"></script>
-    <script src="../scripts/bootstrap.min.js"></script>
-    <script src="../scripts/app.js"></script>
-    <script src="../services/ProjectTasksService.js"></script>
-    <script src="../controllers/ProjectTasksController.js"></script>
-</head>
-<body ng-controller="ProjectTasksController">
-    <h3>{{Title}}</h3>
-    <table class="table table-striped table-hover">
-        <thead>
-            <tr class="info">
-                <td>Project Task ID</td>
-                <td>Start Date</td>
-                <td>End Date</td>
-                <td>Task Completion (%)</td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="success" ng-repeat="task in Tasks">
-                <td>{{task.projectTaskID}}</td>
-                <td>{{task.taskStartDate}}</td>
-                <td>{{task.taskEndDate}}</td>
-                <td>{{task.taskCompletion}}&nbsp;%</td>
-            </tr>
-        </tbody>
-    </table>
-</body>
-</html>
+﻿<h4>{{Title}}</h4>
+<hr />
+<a href="#NewTask" class="btn btn-sm btn-primary">Add New Task</a>
+<hr />
+<table class="table table-striped table-hover" style="width:70%">
+<thead>
+    <tr class="info">
+        <td>Project Task ID</td>
+        <td>Start Date</td>
+        <td>End Date</td>
+        <td>Task Completion (%)</td>
+    </tr>
+</thead>
+<tbody>
+    <tr class="table-striped" ng-repeat="task in Tasks">
+        <td>{{task.projectTaskID}}</td>
+        <td>{{task.taskStartDate | date:'short'}}</td>
+        <td>{{task.taskEndDate | date:'short'}}</td>
+        <td>{{task.taskCompletion}}&nbsp;%</td>
+        <td>
+            <input type="button" value="Modify" class="btn btn-sm btn-info" />
+        </td>
+        <td>
+            <input type="button" value="Delete" class="btn btn-sm btn-info" />
+        </td>
+    </tr>
+</tbody>
+</table>

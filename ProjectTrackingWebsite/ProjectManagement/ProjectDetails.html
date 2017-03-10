@@ -1,37 +1,30 @@
-﻿<!DOCTYPE html>
-<html lang="en" ng-app="ProjectTrackingModule">
-<head>
-    <title>Project Details</title>
-    <script src="../scripts/jquery-3.1.1.min.js"></script>
-    <link href="../css/bootstrap.min.css" rel="stylesheet" />
-    <link href="../css/Site.css" rel="stylesheet" />
-    <script src="../scripts/angular.min.js"></script>
-    <script src="../scripts/bootstrap.min.js"></script>
-    <script src="../scripts/app.js"></script>
-    <script src="../services/ProjectsService.js"></script>
-    <script src="../controllers/ProjectsController.js"></script>
-</head>
-<body ng-controller="ProjectsController">
-    <h3>{{Title}}</h3>
-    <table class="table table-striped table-hover">
-        <thead>
-            <tr class="info">
-                <td>Project ID</td>
-                <td>Project Name</td>
-                <td>Start Date</td>
-                <td>End Date</td>
-                <td>Client Name</td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="table-striped" ng-repeat="proj in Projects">
-                <td>{{proj.projectId}}</td>
-                <td>{{proj.projectName}}</td>
-                <td>{{proj.startDate | date:'short'}}</td>
-                <td>{{proj.endDate | date:'short'}}</td>
-                <td>{{proj.clientName}}</td>
-            </tr>
-        </tbody>
-    </table>
-</body>
-</html>
+﻿<h4>{{Title}}</h4>
+<hr />
+<a href="#NewProject" class="btn btn-sm btn-primary">Add New Project</a>
+<hr />
+<table class="table table-striped table-hover" style="width:70%">
+    <thead>
+        <tr class="info">
+            <td>Project ID</td>
+            <td>Project Name</td>
+            <td>Start Date</td>
+            <td>End Date</td>
+            <td>Client Name</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="table-striped" ng-repeat="proj in Projects">
+            <td>{{proj.projectId}}</td>
+            <td>{{proj.projectName}}</td>
+            <td>{{proj.startDate | date:'short'}}</td>
+            <td>{{proj.endDate | date:'short'}}</td>
+            <td>{{proj.clientName}}</td>
+             <td>
+                <input type="button" value="Modify" class="btn btn-sm btn-info" />
+            </td>
+            <td>
+                <input type="button" value="Delete" class="btn btn-sm btn-info" />
+            </td>
+        </tr>
+    </tbody>
+</table>

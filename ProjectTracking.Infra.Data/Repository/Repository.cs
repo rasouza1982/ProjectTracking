@@ -30,6 +30,7 @@ namespace ProjectTracking.Infra.Data.Repository
         public void Insert(TEntity entity)
         {
             _db.Add(entity);
+            _context.SaveChanges();
         }
 
         public void Update(TEntity entity)
@@ -42,6 +43,7 @@ namespace ProjectTracking.Infra.Data.Repository
         public void Delete(TEntity entity)
         {
             _db.Remove(entity);
+            _context.SaveChanges();
         }
 
         public void Dispose()

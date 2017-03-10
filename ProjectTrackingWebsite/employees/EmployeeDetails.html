@@ -1,44 +1,42 @@
-﻿<!DOCTYPE html>
-<html lang="en" ng-app="ProjectTrackingModule">
-<head>
-    <title>Employee Details</title>
-    <script src="../scripts/jquery-3.1.1.min.js"></script>
-    <link href="../css/bootstrap.min.css" rel="stylesheet" />
-    <link href="../css/Site.css" rel="stylesheet" />
-    <script src="../scripts/angular.min.js"></script>
-    <script src="../scripts/bootstrap.min.js"></script>
-    <script src="../scripts/app.js"></script>
-    <script src="../services/EmployeesService.js"></script>
-    <script src="../controllers/EmployeesController.js"></script>
-</head>
-<body ng-controller="EmployeesController">
-<h3>{{Title}}</h3>
-    <form name="searchEmployeeForm" ng-submit="searchEmployees(employeeName)">
-        Enter Employee Name Or Character To Search - <input type="text" required placeholder="Enter EmployeeID" ng-model="employeeName" />
-        <input type="submit" value="Search Employee" />
-    </form>
-    <table class="table table-striped table-hover" ng-show="Employees">
-    <thead>
-        <tr class="info">
-            <td>Employee ID</td>
-            <td>Employee Name</td>
-            <td>Designation</td>
-            <td>Contact No.</td>
-            <td>E-mail</td>
-            <td>Skill Sets</td>
+﻿<h4>{{Title}}</h4>
+<hr />
+<a href="#NewEmployee" class="btn btn-sm btn-primary">Add New Employee</a>
+<hr />
+<form name="searchEmployeeForm" ng-submit="searchEmployees(employeeName)">
+    <table>
+        <tr>
+            <td>Enter Employee Name Or Character To Search -&nbsp;</td>
+            <td><input type="text" required placeholder="Enter EmployeeID" ng-model="employeeName" class="form-control"/></td>
+            <td>&nbsp;<input type="submit" value="Search Employee" class="btn btn-sm btn-primary"/></td>
         </tr>
-    </thead>
-    <tbody>
-    <tr class="table-striped" ng-repeat="emp in Employees | limitTo:10 | orderBy:'+employeeName'" >
-            <td>{{emp.employeeId}}</td>
-            <td>{{emp.employeeName}}</td>
-            <td>{{emp.designation}}</td>
-            <td>{{emp.contactNo}}</td>
-            <td>{{emp.eMailId}}</td>
-            <td>{{emp.skillSets}}</td>
-        </tr>
-    </tbody>
+    </table>
+</form>
+<br/>
+<table class="table table-striped table-hover" ng-show="Employees">
+<thead>
+    <tr class="info">
+        <td>Employee ID</td>
+        <td>Employee Name</td>
+        <td>Designation</td>
+        <td>Contact No.</td>
+        <td>E-mail</td>
+        <td>Skill Sets</td>
+    </tr>
+</thead>
+<tbody>
+<tr class="table-striped" ng-repeat="emp in Employees | limitTo:10 | orderBy:'+employeeName'" >
+        <td>{{emp.employeeId}}</td>
+        <td>{{emp.employeeName}}</td>
+        <td>{{emp.designation}}</td>
+        <td>{{emp.contactNo}}</td>
+        <td>{{emp.eMailId}}</td>
+        <td>{{emp.skillSets}}</td>
+        <td>
+            <input type="button" value="Modify" class="btn btn-sm btn-info" />
+        </td>
+        <td>
+            <input type="button" value="Delete" class="btn btn-sm btn-info"/>
+        </td>
+    </tr>
+</tbody>
 </table>
-
-</body>
-</html>

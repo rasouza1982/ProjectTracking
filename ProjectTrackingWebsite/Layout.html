@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="ProjectTrackingModule">
+<head>
+    <title>Project Tracking Home Page</title>
+    <script src="scripts/jquery-3.1.1.min.js"></script>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/Site.css" rel="stylesheet"/>
+
+    
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/angular-route.min.js"></script>
+    <script src="scripts/app.js"></script>
+
+    <script src="scripts/bootstrap.min.js"></script>
+
+    
+    <script src="controllers/HomeController.js"></script>
+    <script src="services/ProjectsService.js"></script>
+    <script src="controllers/ProjectsController.js"></script>
+    <script src="controllers/UserStoriesController.js"></script>
+    <script src="services/UserStoriesService.js"></script>
+    <script src="controllers/EmployeesController.js"></script>
+    <script src="services/EmployeesService.js"></script>
+    <script src="controllers/ProjectTasksController.js"></script>
+    <script src="services/ProjectTasksService.js"></script>
+    <script src="controllers/ManagerCommentsController.js"></script>
+    <script src="services/ManagerCommentsService.js"></script>
+</head>
+<body>
+ 
+    <div class="navbar navbar-default">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar" />
+                <span class="icon-bar" />
+                <span class="icon-bar" />
+            </button>
+            <a class="navbar-brand" href="#Projects">Online Project Tracking Site</a>
+        </div>
+        <div class="navbar-collapse collapse navbar-responsive-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a href="#Projects">Projects</a>
+                </li>
+                <li class="active">
+                    <a href="#UserStories">User Stories</a>
+                </li>
+                <li class="active">
+                    <a href="#Employees">Employees</a>
+                </li>
+                <li class="active">
+                    <a href="#Tasks">Tasks</a>
+                </li>
+                <li class="active">
+                    <a href="#Comments">Manager Comments</a>
+                </li>
+            </ul>
+            <img src="../Images/linkedin.png" alt="Linked In" style="float:right;margin-right:10px;margin-top:1%;height:30px;width:30px" />
+            <img src="../Images/Twitter_bird_icon.png" alt="Twitter" style="float:right;margin-right:10px;margin-top:1%;height:30px;width:30px" />
+            <img src="../Images/facebook-icon.png" alt="Facebook" style="float:right;margin-right:10px;margin-top:1%;height:30px;width:30px" />
+        </div>
+    </div>
+    <div ng-view style="margin-left: 10%; margin-right: 10%;">
+    </div>
+    <div >
+        <div>
+            <footer>
+                <div>
+                    <a href="#">Site Map</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a href="#">About Us</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a href="#">Contact Us</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a href="#">Policy</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a href="#">Clients</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a href="#">Feedback</a>
+                </div>
+                &copy;All Rights Reserved.
+                <address>
+                    Ficticious Company,
+                    Contact No - 55 (21) - 9999-9999
+                </address>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
