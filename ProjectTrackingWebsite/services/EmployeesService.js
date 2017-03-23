@@ -12,6 +12,7 @@
                         return response.data;
                     });
         };
+
         return {
             employees: employees,
             searchEmployees: searchEmployees

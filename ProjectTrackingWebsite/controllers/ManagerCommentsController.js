@@ -1,4 +1,5 @@
 ﻿(function () {
+    'use sctrict';
     var ManagerCommentsController = function ($scope, managerCommentsService) {
         var managerComments = function (data) {
             $scope.Comments = data;

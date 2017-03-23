@@ -1,11 +1,13 @@
 ﻿var app = angular.module("ProjectTrackingModule", ["ngRoute"]);
 app.config(function ($routeProvider, $locationProvider) {
+
     $locationProvider.hashPrefix("");
     $routeProvider
         .when("/Home", {
             templateUrl: "/Home.html",
             controller: "HomeController"
         })
+        //Project
         .when("/Projects", {
             templateUrl: "ProjectManagement/ProjectDetails.html",
             controller: "ProjectsController"
@@ -14,6 +16,12 @@ app.config(function ($routeProvider, $locationProvider) {
             templateUrl: "ProjectManagement/ProjectInsert.html",
             controller: "ProjectsController"
         })
+        .when("/ModifyProject/:projectID", {
+            templateUrl: "ProjectManagement/ProjectModify.html",
+            controller: "ProjectsController"
+        })
+
+
         .when("/UserStories", {
             templateUrl: "UserStories/UserStoryDetails.html",
             controller: "UserStoriesController"

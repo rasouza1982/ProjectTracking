@@ -1,4 +1,5 @@
 ﻿(function () {
+    'use strict';
     var EmployeesController = function ($scope, employeeService, $log) {
         var employees = function (data) {
             $scope.Employees = data;

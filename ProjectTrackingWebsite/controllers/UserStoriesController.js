@@ -1,4 +1,5 @@
 ﻿(function () {
+    'use sctrict';
     var UserStoriesController = function ($scope, userStoriesService) {
         var userStories = function (data) {
             $scope.Stories = data;

@@ -19,8 +19,8 @@
             <td>{{proj.startDate | date:'short'}}</td>
             <td>{{proj.endDate | date:'short'}}</td>
             <td>{{proj.clientName}}</td>
-             <td>
-                <input type="button" value="Modify" class="btn btn-sm btn-info" />
+            <td>
+                <a href="#ModifyProject/{{proj.projectID}}" class="btn btn-sm btn-info">Modify</a>
             </td>
             <td>
                 <input type="button" value="Delete" class="btn btn-sm btn-info" />

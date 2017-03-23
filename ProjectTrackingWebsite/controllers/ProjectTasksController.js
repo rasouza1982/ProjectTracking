@@ -1,4 +1,5 @@
 ﻿(function () {
+    'use sctrict';
     var ProjectTasksController = function ($scope, projectTasksService) {
         var projectTasks = function (data) {
             $scope.Tasks = data;
