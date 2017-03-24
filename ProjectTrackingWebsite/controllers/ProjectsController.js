@@ -11,6 +11,7 @@
         };
 
         $scope.init = function () {
+            console.log("$routeParams.projectID:", $routeParams.projectID);
             projectService.singleProject($routeParams.projectID).then(singleProject, errorDetails);
         };
 

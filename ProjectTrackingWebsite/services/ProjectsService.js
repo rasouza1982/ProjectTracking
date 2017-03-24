@@ -33,7 +33,8 @@
         return {
             projects: projects,
             insertProject: insertProject,
-            modifyProject: modifyProject
+            modifyProject: modifyProject,
+            singleProject: singleProject
         };
     };
     var module = angular.module("ProjectTrackingModule");
