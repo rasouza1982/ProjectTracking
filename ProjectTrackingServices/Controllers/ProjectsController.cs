@@ -55,7 +55,7 @@ namespace ProjectTrackingServices.Controllers
         }
 
         // PUT api/projects/5
-        [Route("api/projects")]
+        [Route("api/projects/{id}")]
          public HttpResponseMessage Put(Project project)
         {
             _repository.Update(project);
@@ -65,7 +65,7 @@ namespace ProjectTrackingServices.Controllers
         }
 
         // DELETE api/projects/5
-        [Route("api/projects")]
+        [Route("api/projects/{id}")]
         public HttpResponseMessage Delete(Project project)
         {
             _repository.Delete(project);

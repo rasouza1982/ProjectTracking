@@ -35,9 +35,9 @@ namespace ProjectTracking.Infra.Data.Repository
 
         public void Update(TEntity entity)
         {
-            var entry = _context.Entry(entity);
             _db.Attach(entity);
-            entry.State= EntityState.Modified;
+            _context.Entry(entity).State= EntityState.Modified;
+            _context.SaveChanges();
         }
 
         public void Delete(TEntity entity)

@@ -54,7 +54,7 @@ namespace ProjectTrackingServices.Controllers
             return response;
         }
 
-        [Route("api/employees")]
+        [Route("api/employees/{id}")]
         public HttpResponseMessage Put(Employee employee)
         {
             _repository.Update(employee);

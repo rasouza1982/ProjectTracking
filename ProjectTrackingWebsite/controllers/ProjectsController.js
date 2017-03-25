@@ -35,7 +35,8 @@
                 .then(projectService.projects().then(projects, errorDetails));
         }
 
-        $scope.ModifyProject = function (existingProject) {
+        $scope.modifyProject = function (existingProject) {
+            $log.info("entrou em modify controller");
             $log.info(existingProject);
             projectService.modifyProject(existingProject)
                 .then(projectService.projects().then(projects, errorDetails));
@@ -46,7 +47,6 @@
             projectService.deleteProject(project)
                 .then(projectService.projects().then(projects, errorDetails));
         };
-
         
         $scope.Title = "Project Details Page";
     };
