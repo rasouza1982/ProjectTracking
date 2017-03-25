@@ -21,7 +21,7 @@ app.config(function ($routeProvider, $locationProvider) {
             controller: "ProjectsController"
         })
 
-
+        //User Stories
         .when("/UserStories", {
             templateUrl: "UserStories/UserStoryDetails.html",
             controller: "UserStoriesController"

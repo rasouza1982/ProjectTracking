@@ -6,7 +6,7 @@
         };
 
         var singleProject = function(data) {
-            $scope.existingProject = data;
+            $scope.project = data;
             $log.info(data);
         };
 
@@ -35,19 +35,25 @@
                 .then(projectService.projects().then(projects, errorDetails));
         }
 
-        $scope.modifyProject = function (existingProject) {
+        $scope.modifyProject = function (project) {
             $log.info("entrou em modify controller");
-            $log.info(existingProject);
-            projectService.modifyProject(existingProject)
+            $log.info(project);
+            projectService.modifyProject(project)
                 .then(projectService.projects().then(projects, errorDetails));
         };
 
-        $scope.DeleteProject = function (project) {
+        $scope.deleteProject = function (project) {
             $log.info(project);
             projectService.deleteProject(project)
-                .then(projectService.projects().then(projects, errorDetails));
+                .then(projects, errorDetails);
         };
-        
+
+        //var refresh = function () {
+        //    projectService.projects()
+        //        .then(projects, errorDetails);
+        //};
+
+        //refresh();
         $scope.Title = "Project Details Page";
     };
     //app.controller("ProjectsController", ["$scope", "projectService", "$log", ProjectsController]);

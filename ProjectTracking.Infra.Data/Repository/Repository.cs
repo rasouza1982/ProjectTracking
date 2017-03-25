@@ -46,6 +46,11 @@ namespace ProjectTracking.Infra.Data.Repository
             _context.SaveChanges();
         }
 
+        public void Delete(int id)
+        {
+            Delete(_db.Find(id));
+        }
+
         public void Dispose()
         {
             _context.Dispose();

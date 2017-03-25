@@ -48,7 +48,7 @@ namespace ProjectTrackingServices.Controllers
         }
 
         // PUT api/managercomments/5
-        [Route("api/managercomments")]
+        [Route("api/managercomments/{id}")]
         public HttpResponseMessage Put(ManagerComment managerComment)
         {
             _repository.Update(managerComment);
@@ -58,7 +58,7 @@ namespace ProjectTrackingServices.Controllers
         }
 
         // DELETE api/managercomments/5
-        [Route("api/managercomments")]
+        [Route("api/managercomments/{id}")]
         public HttpResponseMessage Delete(ManagerComment managerComment)
         {
             _repository.Delete(managerComment);

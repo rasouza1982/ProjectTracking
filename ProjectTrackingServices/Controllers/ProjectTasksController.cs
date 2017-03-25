@@ -45,7 +45,7 @@ namespace ProjectTrackingServices.Controllers
             return response;
         }
 
-        [Route("api/projecttasks")]
+        [Route("api/projecttasks/{id}")]
         public HttpResponseMessage Put(ProjectTask projectTask)
         {
             _repository.Update(projectTask);
@@ -54,7 +54,7 @@ namespace ProjectTrackingServices.Controllers
             return response;
         }
 
-        [Route("api/projecttasks")]
+        [Route("api/projecttasks/{id}")]
         public HttpResponseMessage Delete(ProjectTask projectTask)
         {
             _repository.Delete(projectTask);

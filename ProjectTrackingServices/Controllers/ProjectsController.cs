@@ -66,9 +66,9 @@ namespace ProjectTrackingServices.Controllers
 
         // DELETE api/projects/5
         [Route("api/projects/{id}")]
-        public HttpResponseMessage Delete(Project project)
+        public HttpResponseMessage Delete(int id)
         {
-            _repository.Delete(project);
+            _repository.Delete(id);
             var projects = _repository.GetAll();
             HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, projects);
             return response;

@@ -64,7 +64,7 @@ namespace ProjectTrackingServices.Controllers
         }
 
         // DELETE api/ptemployees/5
-        [Route("api/employees")]
+        [Route("api/employees/{id}")]
         public HttpResponseMessage Delete(Employee employee)
         {
             _repository.Delete(employee);

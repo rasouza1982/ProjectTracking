@@ -53,7 +53,7 @@ namespace ProjectTrackingServices.Controllers
             return response;
         }
 
-        [Route("api/userstories")]
+        [Route("api/userstories/{id}")]
         public HttpResponseMessage Put(UserStory userStory)
         {
             _repository.Update(userStory);
@@ -63,7 +63,7 @@ namespace ProjectTrackingServices.Controllers
         }
 
         // DELETE api/userstory/5
-        [Route("api/userstories")]
+        [Route("api/userstories/{id}")]
         public HttpResponseMessage Delete(UserStory userStory)
         {
             _repository.Delete(userStory);

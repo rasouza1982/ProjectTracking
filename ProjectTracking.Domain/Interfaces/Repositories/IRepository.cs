@@ -10,6 +10,8 @@ namespace ProjectTracking.Domain.Interfaces.Repositories
         void Insert(TEntity entity);
         void Update(TEntity entity);
         void Delete(TEntity entity);
+        void Delete(int id);
+
 
     }
 }
