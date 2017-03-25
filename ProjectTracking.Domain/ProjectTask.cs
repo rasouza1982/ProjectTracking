@@ -9,7 +9,7 @@ namespace ProjectTrackingServices.Entities
     {
         public ProjectTask()
         {
-            this.ManagerComments = new HashSet<ManagerComment>();
+            ManagerComments = new HashSet<ManagerComment>();
         }
 
         public int ProjectTaskID { get; set; }

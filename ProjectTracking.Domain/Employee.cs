@@ -1,5 +1,4 @@
 ﻿
-using System;
 using System.Collections.Generic;
 
 namespace ProjectTrackingServices.Entities
@@ -8,7 +7,7 @@ namespace ProjectTrackingServices.Entities
     {
         public Employee()
         {
-            this.ProjectTasks = new HashSet<ProjectTask>();
+            ProjectTasks = new HashSet<ProjectTask>();
         }
 
         public int EmployeeId { get; set; }

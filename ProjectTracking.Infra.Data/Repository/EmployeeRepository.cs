@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using ProjectTracking.Domain.Interfaces.Repositories;
 using ProjectTracking.Infra.Data.DataContext;
 using ProjectTrackingServices.Entities;
-using System.Data.Entity;
-using ProjectTracking.Domain.Interfaces.Repositories;
 
 namespace ProjectTracking.Infra.Data.Repository
 {
@@ -83,9 +81,9 @@ namespace ProjectTracking.Infra.Data.Repository
         //}
 
 
-        public void Dispose()
-        {
-            _context.Dispose();
-        }
+        //public void Dispose()
+        //{
+        //    _context.Dispose();
+        //}
     }
 }

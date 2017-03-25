@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
 
 namespace ProjectTrackingServices.Entities
 {
@@ -9,7 +6,7 @@ namespace ProjectTrackingServices.Entities
     {
         public UserStory()
         {
-            this.ProjectTasks = new HashSet<ProjectTask>();
+            ProjectTasks = new HashSet<ProjectTask>();
         }
 
         public int UserStoryID { get; set; }

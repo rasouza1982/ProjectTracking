@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using ProjectTrackingServices.Entities;
+﻿using ProjectTrackingServices.Entities;
 
 namespace ProjectTracking.Domain.Interfaces.Repositories
 {
